@@ -8,6 +8,8 @@ export default defineConfig({
     plugins: [
         react(),
         tailwindcss(),
-        ViteAliases(),
+        ViteAliases({
+            deep: false,
+        }),
     ],
 })
