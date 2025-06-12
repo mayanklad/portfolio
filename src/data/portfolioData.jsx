@@ -1,7 +1,7 @@
 import { User, Code, Briefcase, Mail } from 'lucide-react';
-import googleCaseIcon from '~assets/images/google-case-study.png';
-import compareHouseIcon from '~assets/images/compare-house-desc-charac.png';
-import vehicleCounting from '~assets/images/vehicle-counting.png';
+import googleCaseIcon from '~/assets/images/google-case-study.png';
+import compareHouseIcon from '~/assets/images/compare-house-desc-charac.png';
+import vehicleCounting from '~/assets/images/vehicle-counting.png';
 
 export const personalInfo = {
     name: 'Mayank Lad',

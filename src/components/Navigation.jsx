@@ -1,5 +1,5 @@
 import { Menu, X } from 'lucide-react';
-import { personalInfo } from '~data/portfolioData';
+import { personalInfo } from '~/data/portfolioData';
 
 function Navigation({ isMenuOpen, setIsMenuOpen, scrollToSection, navigation }) {
     return (
