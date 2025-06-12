@@ -1,4 +1,4 @@
-import { Github, ExternalLink } from 'lucide-react';
+import { Github, ExternalLink } from 'lucide-react'
 
 function Projects({ projects, isVisible }) {
     return (
@@ -66,7 +66,7 @@ function Projects({ projects, isVisible }) {
                 </div>
             </div>
         </section>
-    );
+    )
 }
 
-export default Projects;
+export default Projects

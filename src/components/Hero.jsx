@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, ChevronDown, User, MapPin } from 'lucide-react';
+import { Github, Linkedin, Mail, ChevronDown, User, MapPin } from 'lucide-react'
 
 function Hero({ personalInfo, scrollToSection }) {
     return (
@@ -42,7 +42,7 @@ function Hero({ personalInfo, scrollToSection }) {
                 </button>
             </div>
         </section>
-    );
+    )
 }
 
-export default Hero;
+export default Hero

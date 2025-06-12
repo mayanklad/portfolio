@@ -1,4 +1,4 @@
-import { Calendar } from 'lucide-react';
+import { Calendar } from 'lucide-react'
 
 function Experience({ experience, isVisible }) {
     return (
@@ -31,7 +31,7 @@ function Experience({ experience, isVisible }) {
                 </div>
             </div>
         </section>
-    );
+    )
 }
 
-export default Experience;
+export default Experience

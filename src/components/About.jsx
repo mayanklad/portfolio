@@ -1,4 +1,4 @@
-import { FileText } from 'lucide-react';
+import { FileText } from 'lucide-react'
 
 function About({ skills, isVisible }) {
     return (
@@ -54,7 +54,7 @@ function About({ skills, isVisible }) {
                 </div>
             </div>
         </section>
-    );
+    )
 }
 
-export default About;
+export default About

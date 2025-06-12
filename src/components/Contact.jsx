@@ -1,4 +1,4 @@
-import { Mail, Github, Linkedin } from 'lucide-react';
+import { Mail, Github, Linkedin } from 'lucide-react'
 
 function Contact({ personalInfo, isVisible }) {
     return (
@@ -39,7 +39,7 @@ function Contact({ personalInfo, isVisible }) {
                 </div>
             </div>
         </section>
-    );
+    )
 }
 
-export default Contact;
+export default Contact

@@ -1,7 +1,7 @@
-import { User, Code, Briefcase, Mail } from 'lucide-react';
-import googleCaseIcon from '~/assets/images/google-case-study.png';
-import compareHouseIcon from '~/assets/images/compare-house-desc-charac.png';
-import vehicleCounting from '~/assets/images/vehicle-counting.png';
+import { User, Code, Briefcase, Mail } from 'lucide-react'
+import googleCaseIcon from '~/assets/images/google-case-study.png'
+import compareHouseIcon from '~/assets/images/compare-house-desc-charac.png'
+import vehicleCounting from '~/assets/images/vehicle-counting.png'
 
 export const personalInfo = {
     name: 'Mayank Lad',
@@ -11,7 +11,7 @@ export const personalInfo = {
     github: 'https://github.com/mayanklad',
     linkedin: 'https://linkedin.com/in/mayanklad',
     bio: 'Innovative full-stack engineer with hands-on experience in Java, Spring Boot, and cloud-native applications. I thrive on building reliable, scalable software that delivers real-world impact.'
-};
+}
 
 export const skills = [
     { name: 'Java (Spring Boot)', level: 90 },
@@ -23,7 +23,7 @@ export const skills = [
     { name: 'React (Basics)', level: 65 },
     { name: 'Machine Learning', level: 70 },
     { name: 'Git & CI/CD', level: 80 }
-];
+]
 
 
 
@@ -58,7 +58,7 @@ export const projects = [
         live: '#',
         featured: false
     }
-];
+]
 
 export const experience = [
     {
@@ -91,7 +91,7 @@ export const experience = [
         period: '2016 - 2020',
         description: 'Built a solid foundation in computer engineering principles, with hands-on projects.'
     }
-];
+]
 
 export const navigation = [
     { name: 'Home', id: 'home', icon: User },
@@ -99,4 +99,4 @@ export const navigation = [
     { name: 'Projects', id: 'projects', icon: Code },
     { name: 'Experience', id: 'experience', icon: Briefcase },
     { name: 'Contact', id: 'contact', icon: Mail }
-];
+]

@@ -1,24 +1,24 @@
-import React, { useState, useEffect } from 'react';
-import Navigation from '~/components/Navigation';
-import Hero from '~/components/Hero';
-import About from '~/components/About';
-import Projects from '~/components/Projects';
-import Experience from '~/components/Experience';
-import Contact from '~/components/Contact';
+import React, { useState, useEffect } from 'react'
+import Navigation from '~/components/Navigation'
+import Hero from '~/components/Hero'
+import About from '~/components/About'
+import Projects from '~/components/Projects'
+import Experience from '~/components/Experience'
+import Contact from '~/components/Contact'
 import {
     personalInfo,
     skills,
     projects,
     experience,
     navigation
-} from '~/data/portfolioData';
+} from '~/data/portfolioData'
 
 function App() {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
-    // const [activeSection, setActiveSection] = useState('home');
-    const [isVisible, setIsVisible] = useState({});
+    const [isMenuOpen, setIsMenuOpen] = useState(false)
+    // const [activeSection, setActiveSection] = useState('home')
+    const [isVisible, setIsVisible] = useState({})
 
-    const currentYear = new Date().getFullYear();
+    const currentYear = new Date().getFullYear()
 
     // Intersection Observer for animations
     useEffect(() => {
@@ -26,24 +26,24 @@ function App() {
             entries => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
-                        setIsVisible(prev => ({ ...prev, [entry.target.id]: true }));
+                        setIsVisible(prev => ({ ...prev, [entry.target.id]: true }))
                     }
-                });
+                })
             },
             { threshold: 0.1 }
-        );
+        )
 
-        const sections = document.querySelectorAll('section[id]');
-        sections.forEach(section => observer.observe(section));
+        const sections = document.querySelectorAll('section[id]')
+        sections.forEach(section => observer.observe(section))
 
-        return () => observer.disconnect();
-    }, []);
+        return () => observer.disconnect()
+    }, [])
 
     // Scroll to section
     function scrollToSection(id) {
-        document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
-        setIsMenuOpen(false);
-    };
+        document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
+        setIsMenuOpen(false)
+    }
 
     return (
         <div className="min-h-screen bg-gray-900 text-white">
@@ -66,7 +66,7 @@ function App() {
                 </p>
             </footer>
         </div>
-    );
+    )
 }
 
-export default App;
+export default App
