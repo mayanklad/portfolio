@@ -1,6 +1,17 @@
 import { FileText } from 'lucide-react'
+import resume from '~/assets/documents/Resume - Mayank Lad.pdf'
 
 function About({ skills, isVisible }) {
+    const handleDownload = () => {
+        const link = document.createElement('a')
+        link.href = resume
+        link.download = 'Resume - Mayank Lad.pdf'
+        // document.body.appendChild(link);
+        link.click()
+        // document.body.removeChild(link);
+        link.remove()
+    }
+
     return (
         <section
             id="about"
@@ -25,7 +36,10 @@ function About({ skills, isVisible }) {
                         <p className="text-gray-300 mb-6 leading-relaxed">
                             Every line of code I write is aimed at creating software that's efficient, scalable, and user-focused. I'm excited about what's next—and always ready for the next big challenge.
                         </p>
-                        <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-6 py-3 rounded-lg transition-all duration-200 flex items-center space-x-2">
+                        <button 
+                            className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-6 py-3 rounded-lg transition-all duration-200 flex items-center space-x-2"
+                            onClick={handleDownload}
+                        >
                             <FileText size={20} />
                             <span>Download Resume</span>
                         </button>
