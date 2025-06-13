@@ -1,4 +1,5 @@
 import { Github, Linkedin, Mail, ChevronDown, User, MapPin } from 'lucide-react'
+import profile from '~/assets/images/profile.png'
 
 function Hero({ personalInfo, scrollToSection }) {
     return (
@@ -7,8 +8,8 @@ function Hero({ personalInfo, scrollToSection }) {
             <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
                 <div className="mb-8">
                     <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 p-1">
-                        <div className="w-full h-full rounded-full bg-gray-900 flex items-center justify-center">
-                            <User size={48} className="text-gray-300" />
+                        <div className="w-full h-full rounded-full bg-gray-900 flex items-center justify-center overflow-hidden">
+                            <img src={profile} alt="Profile" className="w-full h-full object-cover object-[50%_20%] rounded-full" />
                         </div>
                     </div>
                     <h1 className="text-5xl md:text-7xl font-bold mb-4 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent animate-pulse">
