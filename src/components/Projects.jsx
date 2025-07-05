@@ -14,7 +14,7 @@ function Projects({ projects, isVisible }) {
                 <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
                     {projects.map((project, index) => (
                         <div 
-                            key={project.id}
+                            key={index}
                             className={`bg-gray-900 rounded-xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-300 hover:-translate-y-2 ${project.featured ? 'ring-2 ring-purple-500/50' : ''}`}
                         >
                             <div className="relative group">
@@ -47,18 +47,24 @@ function Projects({ projects, isVisible }) {
                                 <div className="flex space-x-4">
                                     <a 
                                         href={project.github}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
                                         className="flex items-center space-x-2 text-gray-400 hover:text-white transition-colors"
                                     >
                                         <Github size={16} />
                                         <span>Code</span>
                                     </a>
-                                    <a 
-                                        href={project.live}
-                                        className="flex items-center space-x-2 text-gray-400 hover:text-white transition-colors"
-                                    >
-                                        <ExternalLink size={16} />
-                                        <span>Live Demo</span>
-                                    </a>
+                                    {project.live?.trim() && (
+                                        <a
+                                            href={project.live}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="flex items-center space-x-2 text-gray-400 hover:text-white transition-colors"
+                                        >
+                                            <ExternalLink size={16} />
+                                            <span>Live Demo</span>
+                                        </a>
+                                    )}
                                 </div>
                             </div>
                         </div>

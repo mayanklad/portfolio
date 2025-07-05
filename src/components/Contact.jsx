@@ -16,6 +16,8 @@ function Contact({ personalInfo, isVisible }) {
                 <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
                     <a 
                         href={`mailto:${personalInfo.email}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-8 py-4 rounded-lg transition-all duration-200 flex items-center space-x-3 text-lg"
                     >
                         <Mail size={24} />
@@ -25,12 +27,16 @@ function Contact({ personalInfo, isVisible }) {
                     <div className="flex space-x-4">
                         <a 
                             href={personalInfo.github}
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="text-gray-400 hover:text-white transition-colors p-4 bg-gray-800 rounded-lg hover:bg-gray-700"
                         >
                             <Github size={24} />
                         </a>
                         <a 
                             href={personalInfo.linkedin}
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="text-gray-400 hover:text-white transition-colors p-4 bg-gray-800 rounded-lg hover:bg-gray-700"
                         >
                             <Linkedin size={24} />

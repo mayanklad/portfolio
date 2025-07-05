@@ -25,13 +25,28 @@ function Hero({ personalInfo, scrollToSection }) {
                     {personalInfo.bio}
                 </p>
                 <div className="flex justify-center space-x-6 mb-12">
-                    <a href={personalInfo.github} className="text-gray-400 hover:text-white transition-colors p-3 bg-gray-800 rounded-full hover:bg-gray-700">
+                    <a
+                        href={personalInfo.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-gray-400 hover:text-white transition-colors p-3 bg-gray-800 rounded-full hover:bg-gray-700"
+                    >
                         <Github size={24} />
                     </a>
-                    <a href={personalInfo.linkedin} className="text-gray-400 hover:text-white transition-colors p-3 bg-gray-800 rounded-full hover:bg-gray-700">
+                    <a
+                        href={personalInfo.linkedin}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-gray-400 hover:text-white transition-colors p-3 bg-gray-800 rounded-full hover:bg-gray-700"
+                    >
                         <Linkedin size={24} />
                     </a>
-                    <a href={`mailto:${personalInfo.email}`} className="text-gray-400 hover:text-white transition-colors p-3 bg-gray-800 rounded-full hover:bg-gray-700">
+                    <a
+                        href={`mailto:${personalInfo.email}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-gray-400 hover:text-white transition-colors p-3 bg-gray-800 rounded-full hover:bg-gray-700"
+                    >
                         <Mail size={24} />
                     </a>
                 </div>
