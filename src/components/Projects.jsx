@@ -15,15 +15,15 @@ function Projects({ projects, isVisible }) {
                     {projects.map((project, index) => (
                         <div 
                             key={index}
-                            className={`bg-gray-900 rounded-xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-300 hover:-translate-y-2 ${project.featured ? 'ring-2 ring-purple-500/50' : ''}`}
+                            className={`group bg-gray-900 rounded-xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-300 hover:-translate-y-2 ${project.featured ? 'ring-2 ring-purple-500/50' : ''}`}
                         >
                             <div className="relative group">
                                 <img 
                                     src={project.image} 
                                     alt={project.title}
-                                    className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                                    className="w-full h-48 object-contain group-hover:scale-105 transition-transform duration-300"
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity group-hover:scale-105 transition-transform duration-300" />
                             </div>
                             
                             <div className="p-6">
@@ -52,8 +52,30 @@ function Projects({ projects, isVisible }) {
                                         className="flex items-center space-x-2 text-gray-400 hover:text-white transition-colors"
                                     >
                                         <Github size={16} />
-                                        <span>Code</span>
+                                        <span>GitHub</span>
                                     </a>
+                                    {project.kaggle?.trim() && (
+                                        <a
+                                            href={project.kaggle}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="flex items-center space-x-2 text-gray-400 hover:text-white transition-colors"
+                                        >
+                                            <ExternalLink size={16} />
+                                            <span>Kaggle</span>
+                                        </a>
+                                    )}
+                                    {project.huggingFace?.trim() && (
+                                        <a
+                                            href={project.huggingFace}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="flex items-center space-x-2 text-gray-400 hover:text-white transition-colors"
+                                        >
+                                            <ExternalLink size={16} />
+                                            <span>Hugging Face</span>
+                                        </a>
+                                    )}
                                     {project.live?.trim() && (
                                         <a
                                             href={project.live}
