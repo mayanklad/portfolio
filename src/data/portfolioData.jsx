@@ -2,6 +2,7 @@ import { User, Code, Briefcase, Mail } from 'lucide-react'
 import googleCase from '~/assets/images/google-case-study.png'
 import compareHouse from '~/assets/images/compare-house-desc-charac.png'
 import vehicleCounting from '~/assets/images/vehicle-counting.png'
+import infraScope from '~/assets/images/infrascope.png'
 import rentalManager from '~/assets/gifs/rental-property-manager.gif'
 import rentalManagerApi from '~/assets/images/rental-manager-api.png'
 import chatBot from '~/assets/images/chatbot.png'
@@ -34,18 +35,27 @@ export const skills = [
 
 export const projects = [
     {
+        title: 'InfraScope',
+        description: 'A full-stack DevOps focused application that parses Terraform, Anisble and Docker Compose configurations, converts them into an interactive infrastructure graph using React Force Graph.',
+        tech: ['Java', 'Spring Boot', 'React', 'Tailwind CSS', 'React Force Graph (2D)','Docker', 'Terraform', 'Ansible'],
+        image: infraScope,
+        githubFrontend: 'https://github.com/mayanklad/infrascope-frontend',
+        githubBackend: 'https://github.com/mayanklad/infrascope-backend',
+        featured: true
+    },
+    {
         title: 'Rental Property Manager',
         description: 'A full-stack web application for managing rental properties, built with Java Spring Boot, React and PostgreSQL. It allows users to add, edit, and delete properties, view property details, and manage tenant information.',
-        tech: ['Spring Boot', 'Spring Data JPA', 'React', 'Tailwind CSS', 'Docker', 'Netlify', 'Render', 'Neon Postgres'],
+        tech: ['Java', 'Spring Boot', 'Spring Data JPA', 'React', 'Tailwind CSS', 'Docker', 'Netlify', 'Render', 'Neon Postgres'],
         image: rentalManager,
         github: 'https://github.com/mayanklad/rental-manager',
         live: 'https://rental-manager-ui.netlify.app/',
-        featured: false
+        featured: true
     },
     {
         title: 'Rental Manager API',
         description: 'The backend API for the Rental Property Manager application, built with Java Spring Boot and PostgreSQL. It provides endpoints for managing properties, tenants, and rental transactions.',
-        tech: ['Spring Boot', 'Spring Data JPA','Docker', 'Neon Postgres', 'Render'],
+        tech: ['Java', 'Spring Boot', 'Spring Data JPA','Docker', 'Neon Postgres', 'Render'],
         image: rentalManagerApi,
         github: 'https://github.com/mayanklad/rental-manager-api',
         live: 'https://rental-manager-api-r6jt.onrender.com/swagger-ui/index.html',
@@ -67,7 +77,7 @@ export const projects = [
         image: chatBot,
         github: 'https://github.com/mayanklad/chatbot-canada-immigration',
         huggingFace: 'https://huggingface.co/mayanklad/faq-canada-immigration',
-        featured: false,
+        featured: true,
     },
     {
         title: 'Personal Portfolio',
